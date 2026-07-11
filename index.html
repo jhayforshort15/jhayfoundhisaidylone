@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aidyl & Jhay · August 07, 2026</title>
+  <meta name="description" content="Together with our families, Aidyl & Jhay request the honor of your presence to celebrate our union in marriage." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant:wght@300;400;500;600&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">A<span>&amp;</span>J</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="active">Home</a>
+        <a href="#story">Story</a>
+        <a href="#details">Details</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#rsvp">RSVP</a>
+      </nav>
+      <button class="music-btn" id="musicBtn" aria-label="Toggle music">
+        <span class="music-icon">♪</span>
+        <span class="music-label">Music On</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="petals" id="petals"></div>
+    <img class="hero-art hero-art--left" src="assets/hero-left.png" alt="" aria-hidden="true" />
+    <img class="hero-art hero-art--right" src="assets/hero-right.png" alt="" aria-hidden="true" />
+
+    <div class="hero-content">
+      <p class="hero-pre">Together With Our Families</p>
+      <h1 class="hero-names">
+        <span class="name">Aidyl</span>
+        <span class="amp">and</span>
+        <span class="name">Jhay</span>
+      </h1>
+      <p class="hero-invite">Request the honor of your presence<br/>to celebrate our union in marriage</p>
+      <div class="hero-date">
+        <span class="hd-side">Friday</span>
+        <span class="hd-day">07</span>
+        <span class="hd-side">August</span>
+      </div>
+      <p class="hero-year">2026</p>
+      <a href="#story" class="btn-outline hero-open">Open Invitation</a>
+      <a href="#countdown" class="hero-chevron" aria-label="Scroll down">⌄</a>
+    </div>
+  </section>
+
+  <!-- ===== COUNTDOWN ===== -->
+  <section class="countdown" id="countdown">
+    <p class="section-eyebrow"><span class="leaf">❧</span> Wedding Begins In</p>
+    <div class="cd-grid" id="cdGrid">
+      <div class="cd-item"><span class="cd-num" id="cdDays">00</span><span class="cd-label">Days</span></div>
+      <span class="cd-sep"></span>
+      <div class="cd-item"><span class="cd-num" id="cdHours">00</span><span class="cd-label">Hours</span></div>
+      <span class="cd-sep"></span>
+      <div class="cd-item"><span class="cd-num" id="cdMins">00</span><span class="cd-label">Minutes</span></div>
+      <span class="cd-sep"></span>
+      <div class="cd-item"><span class="cd-num" id="cdSecs">00</span><span class="cd-label">Seconds</span></div>
+    </div>
+  </section>
+
+  <!-- ===== STORY ===== -->
+  <section class="story" id="story">
+    <div class="story-head reveal">
+      <h2 class="script-title">Our Story</h2>
+      <p class="story-quote">"Every love story is beautiful,<br/>but ours is our favorite."</p>
+      <a href="#timeline" class="btn-outline">View Our Journey</a>
+    </div>
+    <div class="story-timeline reveal">
+      <div class="st-line"></div>
+      <div class="st-item">
+        <span class="st-year">2018</span>
+        <div class="st-photo st-photo--1"></div>
+        <span class="st-cap">First Met</span>
+      </div>
+      <div class="st-dot"></div>
+      <div class="st-item">
+        <span class="st-year">2019</span>
+        <div class="st-photo st-photo--2"></div>
+        <span class="st-cap">First Date</span>
+      </div>
+      <div class="st-dot"></div>
+      <div class="st-item">
+        <span class="st-year">2021</span>
+        <div class="st-photo st-photo--3"></div>
+        <span class="st-cap">Better Together</span>
+      </div>
+      <div class="st-dot"></div>
+      <div class="st-item">
+        <span class="st-year">2025</span>
+        <div class="st-photo st-photo--4"></div>
+        <span class="st-cap">She Said Yes</span>
+      </div>
+      <div class="st-dot"></div>
+      <div class="st-item">
+        <span class="st-year">2026</span>
+        <div class="st-photo st-photo--5"></div>
+        <span class="st-cap">Forever</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DETAILS + TIMELINE ===== -->
+  <section class="details-wrap" id="details">
+    <div class="panel details reveal">
+      <h2 class="script-title small">The Details <span class="leaf">❧</span></h2>
+      <div class="detail-cards">
+        <article class="detail-card">
+          <div class="dc-icon">⛪</div>
+          <h3>Temple Ceremony</h3>
+          <p class="dc-time">1:00 PM</p>
+          <p class="dc-place">Alabang Philippines Temple</p>
+          <a class="dc-map" href="https://maps.google.com/?q=Alabang+Philippines+Temple" target="_blank" rel="noopener">View Map ⚲</a>
+        </article>
+        <article class="detail-card">
+          <div class="dc-icon">❀</div>
+          <h3>Reception</h3>
+          <p class="dc-time">4:00 PM</p>
+          <p class="dc-place">Archie's Events Place<br/>San Pedro, Laguna</p>
+          <a class="dc-map" href="https://maps.google.com/?q=Archie's+Events+Place+San+Pedro+Laguna" target="_blank" rel="noopener">View Map ⚲</a>
+        </article>
+      </div>
+      <a class="btn-outline center" id="addCalendar" href="#">📅 Add to Calendar</a>
+    </div>
+
+    <div class="panel timeline reveal" id="timeline">
+      <h2 class="script-title small">Timeline of Events <span class="leaf">❧</span></h2>
+      <ul class="tl-list">
+        <li>
+          <span class="tl-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 8.5 9.5 5.5h5L12 8.5z"/><path d="M9.5 5.5 8 7m6.5-1.5L16 7"/>
+              <circle cx="12" cy="14.5" r="4.5"/>
+            </svg>
+          </span>
+          <span class="tl-node"></span><span class="tl-time">1:00 PM</span><span class="tl-ev">Temple Ceremony</span>
+        </li>
+        <li>
+          <span class="tl-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 8.5h3l1.3-2h7.4L16 8.5h5v9.5H3z"/><circle cx="12" cy="13" r="3.3"/>
+            </svg>
+          </span>
+          <span class="tl-node"></span><span class="tl-time">2:00 PM</span><span class="tl-ev">Photo Session</span>
+        </li>
+        <li>
+          <span class="tl-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 4h3v6a1.5 1.5 0 0 1-3 0V4zm5 0h3v6a1.5 1.5 0 0 1-3 0V4z"/>
+              <path d="M9.5 11.5 9 20m-1.5 0h3m5.5-8.5L16 20m1.5 0h-3"/>
+            </svg>
+          </span>
+          <span class="tl-node"></span><span class="tl-time">4:00 PM</span><span class="tl-ev">Social Hour</span>
+        </li>
+        <li>
+          <span class="tl-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="3" width="6" height="10" rx="3"/><path d="M6.5 11a5.5 5.5 0 0 0 11 0M12 16.5V20m-2.5 0h5"/>
+            </svg>
+          </span>
+          <span class="tl-node"></span><span class="tl-time">5:30 PM</span><span class="tl-ev">Exchange of Vows</span>
+        </li>
+        <li>
+          <span class="tl-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </span>
+          <span class="tl-node"></span><span class="tl-time">7:30 PM</span><span class="tl-ev">Reception &amp; Dinner</span>
+        </li>
+        <li>
+          <span class="tl-ic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 15v-3l1.5-4h13L20 12v3M4 15h16M4 15v2H6v-2m14 0v2h-2v-2"/>
+              <circle cx="7.5" cy="15" r="1"/><circle cx="16.5" cy="15" r="1"/>
+            </svg>
+          </span>
+          <span class="tl-node"></span><span class="tl-time">8:00 PM</span><span class="tl-ev">Send-Off</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== TRIO: DRESS / GIFT / GALLERY ===== -->
+  <section class="trio">
+    <div class="panel trio-card reveal">
+      <h2 class="script-title small">Dress Code</h2>
+      <div class="dress-cols">
+        <div><span class="dress-label">Ladies</span><div class="dress-fig dress-fig--ladies"></div></div>
+        <div><span class="dress-label">Gentlemen</span><div class="dress-fig dress-fig--men"></div></div>
+      </div>
+      <div class="swatches">
+        <span style="--c:#e0b23a"></span><span style="--c:#f4e7c3"></span>
+        <span style="--c:#e8dcc0"></span><span style="--c:#d9c9ad"></span>
+        <span style="--c:#c9a877"></span><span style="--c:#7a4a1e"></span>
+        <span style="--c:#9aa887"></span>
+      </div>
+      <a class="btn-outline center" href="#">View Guide</a>
+    </div>
+
+    <div class="panel trio-card center-card reveal">
+      <div class="gift-icon">🎁</div>
+      <h2 class="script-title small">Gift Guide</h2>
+      <p class="gift-text">Your presence at our wedding is the greatest gift we could ask for.</p>
+      <p class="gift-text">Should you wish to bless us further, a monetary gift would be greatly appreciated.</p>
+      <a class="btn-outline center" href="#">View Details</a>
+    </div>
+
+    <div class="panel trio-card reveal" id="gallery">
+      <h2 class="script-title small">Gallery</h2>
+      <div class="gallery-grid">
+        <div class="g-img g1"></div><div class="g-img g2"></div><div class="g-img g3"></div>
+        <div class="g-img g4"></div><div class="g-img g5"></div><div class="g-img g6"></div>
+      </div>
+      <a class="btn-outline center" href="#">View Gallery</a>
+    </div>
+  </section>
+
+  <!-- ===== RSVP ===== -->
+  <section class="rsvp" id="rsvp">
+    <h2 class="script-title">Will You Celebrate With Us? <span class="leaf">❧</span></h2>
+    <form class="rsvp-form" id="rsvpForm" novalidate>
+      <div class="field field--wide">
+        <label for="fullname">Full Name(s)</label>
+        <input type="text" id="fullname" name="fullname" placeholder="e.g. Juan Dela Cruz" required />
+      </div>
+      <div class="field">
+        <label>Attending?</label>
+        <div class="attend-toggle">
+          <label class="attend-opt">
+            <input type="radio" name="attending" value="Happily Accepts" required />
+            <span>♡ Happily Accepts</span>
+          </label>
+          <label class="attend-opt">
+            <input type="radio" name="attending" value="Regretfully Declines" />
+            <span>✕ Regretfully Declines</span>
+          </label>
+        </div>
+      </div>
+      <div class="field field--msg">
+        <label for="message">Message <span class="muted">(optional)</span></label>
+        <textarea id="message" name="message" placeholder="Leave a message for the couple..."></textarea>
+      </div>
+      <button type="submit" class="btn-solid" id="rsvpSubmit">Submit RSVP</button>
+      <p class="rsvp-note" id="rsvpNote" hidden></p>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="ft-col">
+      <div class="ft-logo"><span>Aidyl</span><em>and</em><span>Jhay</span></div>
+    </div>
+    <div class="ft-col ft-center">
+      <p class="ft-see">See You On</p>
+      <p class="ft-date">August 07, 2026!</p>
+      <div class="ft-social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="TikTok">♪</a>
+      </div>
+    </div>
+    <div class="ft-col ft-right">
+      <p class="ft-thanks">Thank you!</p>
+      <p class="ft-love">With Love ♡</p>
+    </div>
+    <p class="ft-copy">© 2026 Aidyl &amp; Jhay. All rights reserved.</p>
+  </footer>
+
+  <audio id="bgMusic" loop preload="none">
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

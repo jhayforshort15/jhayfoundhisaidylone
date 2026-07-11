@@ -294,6 +294,9 @@ img{max-width:100%;display:block}
 .ft-love{text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;color:var(--gold-deep)}
 .ft-copy{grid-column:1/-1;border-top:1px solid var(--line);margin-top:1.5rem;padding-top:1.2rem;font-size:.72rem;color:var(--ink);opacity:.75}
 
+/* ---------- background music (hidden YouTube player) ---------- */
+#ytAudio{position:fixed;left:-9999px;bottom:0;width:220px;height:124px;opacity:0;pointer-events:none}
+
 /* ---------- reveal ---------- */
 .reveal{opacity:0;transform:translateY(30px);transition:.8s ease}
 .reveal.in{opacity:1;transform:none}

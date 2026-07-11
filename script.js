@@ -69,22 +69,74 @@
   }, { threshold: 0.14 });
   document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
 
-  /* ---- music toggle ---- */
-  var music = document.getElementById("bgMusic");
+  /* ---- background music: YouTube stream, autoplay with gesture fallback ---- */
+  var YT_VIDEO_ID = "ap03lop3lds";
   var musicBtn = document.getElementById("musicBtn");
   var label = musicBtn.querySelector(".music-label");
+  var ytPlayer = null;
+  var userPaused = false;
+
+  function setBtn(playing) {
+    musicBtn.classList.toggle("playing", playing);
+    label.textContent = playing ? "Music On" : "Music Off";
+  }
+
+  function tryPlay() {
+    if (ytPlayer && ytPlayer.playVideo && !userPaused) {
+      ytPlayer.unMute();
+      ytPlayer.playVideo();
+    }
+  }
+
+  // First tap/click/keypress anywhere starts the music if autoplay was blocked.
+  function gestureStart() {
+    tryPlay();
+    document.removeEventListener("pointerdown", gestureStart);
+    document.removeEventListener("keydown", gestureStart);
+    document.removeEventListener("touchstart", gestureStart);
+  }
+  document.addEventListener("pointerdown", gestureStart);
+  document.addEventListener("keydown", gestureStart);
+  document.addEventListener("touchstart", gestureStart);
+
+  window.onYouTubeIframeAPIReady = function () {
+    ytPlayer = new YT.Player("ytAudio", {
+      videoId: YT_VIDEO_ID,
+      playerVars: {
+        autoplay: 1,
+        loop: 1,
+        playlist: YT_VIDEO_ID, // required for loop
+        controls: 0,
+        disablekb: 1,
+        playsinline: 1,
+        rel: 0
+      },
+      events: {
+        onReady: function (e) {
+          e.target.setVolume(55);
+          tryPlay(); // attempt instant autoplay; browsers may defer to first gesture
+        },
+        onStateChange: function (e) {
+          if (e.data === YT.PlayerState.PLAYING) setBtn(true);
+          else if (e.data === YT.PlayerState.PAUSED) setBtn(false);
+        }
+      }
+    });
+  };
+
+  // Load the YouTube IFrame API
+  var ytTag = document.createElement("script");
+  ytTag.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(ytTag);
+
   musicBtn.addEventListener("click", function () {
-    if (music.paused) {
-      music.play().then(function () {
-        musicBtn.classList.add("playing");
-        label.textContent = "Music On";
-      }).catch(function () {
-        label.textContent = "No Audio";
-      });
+    if (!ytPlayer || !ytPlayer.getPlayerState) return;
+    if (ytPlayer.getPlayerState() === 1) { // playing
+      userPaused = true;
+      ytPlayer.pauseVideo();
     } else {
-      music.pause();
-      musicBtn.classList.remove("playing");
-      label.textContent = "Music Off";
+      userPaused = false;
+      tryPlay();
     }
   });
 

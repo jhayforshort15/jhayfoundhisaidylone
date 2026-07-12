@@ -1,3 +1,14 @@
+/* Anastasia Script — drop the font file in assets/fonts/ (any of these names).
+   Until then, the hero names fall back to Great Vibes automatically. */
+@font-face{
+  font-family:'Anastasia Script';
+  src:url('assets/fonts/anastasia-script.woff2') format('woff2'),
+      url('assets/fonts/anastasia-script.woff') format('woff'),
+      url('assets/fonts/anastasia-script.ttf') format('truetype'),
+      url('assets/fonts/anastasia-script.otf') format('opentype');
+  font-display:swap;
+}
+
 :root{
   --cream:#faf5ec;
   --cream-2:#f4ecdc;
@@ -71,8 +82,8 @@ img{max-width:100%;display:block}
 .nav-logo{display:inline-flex;align-items:center;text-decoration:none;transition:.3s}
 .nav-logo:hover{transform:scale(1.05)}
 .mono{display:block;width:auto}
-.mono--nav{height:52px}
-.mono--footer{height:110px}
+.mono--nav{height:50px}
+.mono--footer{height:104px}
 .nav-links{display:flex;gap:2rem}
 .nav-links a{
   font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;
@@ -122,7 +133,7 @@ img{max-width:100%;display:block}
   font-family:'Cormorant Garamond',serif;text-transform:uppercase;
   letter-spacing:.35em;color:var(--gold-deep);font-size:.85rem;margin-bottom:1rem;
 }
-.hero-names{font-family:'Great Vibes',cursive;color:var(--brown);line-height:1}
+.hero-names{font-family:'Anastasia Script','Great Vibes',cursive;color:var(--brown);line-height:1}
 .hero-names .name{display:block;font-size:clamp(4.6rem,14vw,9rem);font-weight:400;letter-spacing:.02em;text-transform:none}
 .hero-names .amp{
   display:flex;align-items:center;justify-content:center;gap:.4rem;
@@ -311,6 +322,8 @@ img{max-width:100%;display:block}
     background:var(--cream);box-shadow:-10px 0 40px -20px rgba(0,0,0,.3);transition:.4s;z-index:60}
   .nav-links.open{right:0}
   .burger{display:flex;z-index:61}
+  /* group the music button beside the hamburger so the bar stays aligned */
+  .music-btn{margin-left:auto;margin-right:.9rem}
   .story{grid-template-columns:1fr;padding:4rem 1.5rem}
   .story-head{text-align:center}
   .story-head .script-title,.story-quote{text-align:center}

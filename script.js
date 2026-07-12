@@ -84,6 +84,7 @@
   function tryPlay() {
     if (ytPlayer && ytPlayer.playVideo && !userPaused) {
       ytPlayer.unMute();
+      ytPlayer.setVolume(55);
       ytPlayer.playVideo();
     }
   }
@@ -114,20 +115,25 @@
       events: {
         onReady: function (e) {
           e.target.setVolume(55);
-          tryPlay(); // attempt instant autoplay; browsers may defer to first gesture
+          // Start muted immediately so YouTube begins buffering right away,
+          // then unmute — this shortens the delay before sound is heard.
+          e.target.mute();
+          e.target.playVideo();
+          try { e.target.setPlaybackQuality("small"); } catch (err) {}
+          tryPlay(); // attempt to unmute + play (browsers may defer to first gesture)
         },
         onStateChange: function (e) {
-          if (e.data === YT.PlayerState.PLAYING) setBtn(true);
+          if (e.data === YT.PlayerState.PLAYING) { setBtn(true); tryPlay(); }
           else if (e.data === YT.PlayerState.PAUSED) setBtn(false);
         }
       }
     });
   };
 
-  // Load the YouTube IFrame API
+  // Load the YouTube IFrame API as early as possible
   var ytTag = document.createElement("script");
   ytTag.src = "https://www.youtube.com/iframe_api";
-  document.head.appendChild(ytTag);
+  (document.head || document.documentElement).appendChild(ytTag);
 
   musicBtn.addEventListener("click", function () {
     if (!ytPlayer || !ytPlayer.getPlayerState) return;

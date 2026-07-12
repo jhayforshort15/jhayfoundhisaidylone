@@ -68,11 +68,11 @@ img{max-width:100%;display:block}
   max-width:1200px;margin:0 auto;padding:1.1rem 2rem;
   display:flex;align-items:center;justify-content:space-between;gap:1rem;
 }
-.nav-logo{
-  font-family:'Cormorant Garamond',serif;font-size:1.7rem;
-  color:var(--brown);text-decoration:none;font-weight:600;letter-spacing:.05em;
-}
-.nav-logo span{color:var(--gold)}
+.nav-logo{display:inline-flex;align-items:center;text-decoration:none;transition:.3s}
+.nav-logo:hover{transform:scale(1.05)}
+.mono{display:block}
+.mono--nav{width:58px;height:48px}
+.mono--footer{width:118px;height:98px}
 .nav-links{display:flex;gap:2rem}
 .nav-links a{
   font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;
@@ -122,8 +122,8 @@ img{max-width:100%;display:block}
   font-family:'Cormorant Garamond',serif;text-transform:uppercase;
   letter-spacing:.35em;color:var(--gold-deep);font-size:.85rem;margin-bottom:1rem;
 }
-.hero-names{font-family:'Italiana',serif;color:var(--brown);line-height:.95}
-.hero-names .name{display:block;font-size:clamp(3.6rem,11vw,7rem);font-weight:400;letter-spacing:.1em;text-transform:uppercase}
+.hero-names{font-family:'Great Vibes',cursive;color:var(--brown);line-height:1}
+.hero-names .name{display:block;font-size:clamp(4.6rem,14vw,9rem);font-weight:400;letter-spacing:.02em;text-transform:none}
 .hero-names .amp{
   display:flex;align-items:center;justify-content:center;gap:.4rem;
   font-family:'Great Vibes',cursive;text-transform:none;
@@ -336,7 +336,7 @@ img{max-width:100%;display:block}
   .rsvp{padding:3rem 1.2rem 4rem}
 }
 @media(max-width:440px){
-  .hero-names .name{font-size:3rem;letter-spacing:.08em}
+  .hero-names .name{font-size:4.4rem;letter-spacing:.02em}
   .detail-cards{grid-template-columns:1fr}
   .hero-art{opacity:.5;width:96px}
   .attend-toggle{flex-direction:column}

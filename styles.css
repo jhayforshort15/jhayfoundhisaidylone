@@ -83,7 +83,7 @@ img{max-width:100%;display:block}
 .nav-logo:hover{transform:scale(1.05)}
 .mono{display:block;width:auto}
 .mono--nav{height:50px}
-.mono--footer{height:104px}
+.mono--footer{height:104px;margin:0 auto}
 .nav-links{display:flex;gap:2rem}
 .nav-links a{
   font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;

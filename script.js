@@ -146,26 +146,6 @@
     }
   });
 
-  /* ---- add to calendar (.ics download) ---- */
-  document.getElementById("addCalendar").addEventListener("click", function (ev) {
-    ev.preventDefault();
-    var ics = [
-      "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//AidylJhay//Wedding//EN",
-      "BEGIN:VEVENT",
-      "UID:aidyl-jhay-2026@wedding",
-      "DTSTART:20260807T050000Z",   // 1:00 PM PHT
-      "DTEND:20260807T140000Z",     // 10:00 PM PHT (send-off)
-      "SUMMARY:Wedding of Aidyl & Jhay",
-      "LOCATION:Alabang Philippines Temple",
-      "DESCRIPTION:Ceremony 1:00 PM at Alabang Philippines Temple. Reception 4:00 PM at Archie's Events Place, San Pedro, Laguna.",
-      "END:VEVENT", "END:VCALENDAR"
-    ].join("\r\n");
-    var blob = new Blob([ics], { type: "text/calendar" });
-    var a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "aidyl-and-jhay-wedding.ics";
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
-  });
 
   /* ---- RSVP -> email to both addresses ---- */
   var form = document.getElementById("rsvpForm");

@@ -21,26 +21,35 @@
 
   <!-- ===== A&J MONOGRAM (reusable symbol) ===== -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="ajMono" viewBox="0 0 120 100">
-      <ellipse cx="60" cy="54" rx="47" ry="38" fill="none" stroke="#b58a4e" stroke-width="1.2"/>
-      <!-- bloom on top -->
-      <g transform="translate(60,15)">
-        <g fill="#ead08a" stroke="#b58a4e" stroke-width="0.6">
-          <ellipse cx="0" cy="-6.5" rx="3.1" ry="6.2"/>
-          <ellipse cx="0" cy="-6.5" rx="3.1" ry="6.2" transform="rotate(72)"/>
-          <ellipse cx="0" cy="-6.5" rx="3.1" ry="6.2" transform="rotate(144)"/>
-          <ellipse cx="0" cy="-6.5" rx="3.1" ry="6.2" transform="rotate(216)"/>
-          <ellipse cx="0" cy="-6.5" rx="3.1" ry="6.2" transform="rotate(288)"/>
-        </g>
-        <circle r="2.3" fill="#c98a2e"/>
+    <symbol id="ajMono" viewBox="0 0 210 250">
+      <!-- botanical sprig rising from behind the A -->
+      <g stroke="#7a4a1e" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M150 116 C 156 90, 159 62, 161 38"/>
+        <!-- short hanging seed pod -->
+        <path d="M150 116 C 145 124, 145 132, 150 138 C 155 132, 155 124, 150 116 Z" fill="#f6ecd0"/>
+        <path d="M150 118 L150 136"/>
       </g>
-      <!-- leaf sprig on bottom -->
-      <g transform="translate(60,92)" fill="none" stroke="#a7b487" stroke-width="1.2" stroke-linecap="round">
-        <path d="M0 0 q-9 -2 -14 -9"/><path d="M0 0 q9 -2 14 -9"/>
-        <path d="M-7 -3 q-6 1 -9 -4"/><path d="M7 -3 q6 1 9 -4"/>
+      <g fill="#f6ecd0" stroke="#7a4a1e" stroke-width="1.3" stroke-linejoin="round">
+        <!-- leaf pairs along the stem (bottom -> top) -->
+        <path d="M151 110 C 139 106, 129 110, 123 120 C 135 124, 147 120, 151 110 Z"/>
+        <path d="M151 110 C 163 106, 173 110, 179 120 C 167 124, 155 120, 151 110 Z"/>
+        <path d="M152 92 C 141 88, 132 92, 127 101 C 138 105, 148 101, 152 92 Z"/>
+        <path d="M152 92 C 163 88, 172 92, 177 101 C 166 105, 156 101, 152 92 Z"/>
+        <path d="M154 74 C 144 71, 136 74, 132 82 C 141 86, 151 82, 154 74 Z"/>
+        <path d="M154 74 C 164 71, 172 74, 176 82 C 167 86, 157 82, 154 74 Z"/>
+        <path d="M157 58 C 149 56, 143 58, 139 65 C 147 68, 155 65, 157 58 Z"/>
+        <path d="M157 58 C 165 56, 171 58, 175 65 C 167 68, 159 65, 157 58 Z"/>
+        <path d="M161 40 C 155 36, 160 30, 168 31 C 169 39, 166 43, 161 40 Z"/>
       </g>
-      <!-- script initials -->
-      <text x="60" y="68" text-anchor="middle" font-family="'Great Vibes', cursive" font-size="46" fill="#5e3d1d">A&amp;J</text>
+      <g stroke="#a06b32" stroke-width="0.7" fill="none">
+        <path d="M151 110 L125 119M151 110 L177 119M152 92 L129 100M152 92 L175 100M154 74 L134 81M154 74 L174 81M157 58 L141 64M157 58 L173 64"/>
+      </g>
+      <!-- serif initials, overlapping like the reference -->
+      <g fill="#6e4420" font-weight="500">
+        <text x="6"   y="176" font-family="'Italiana',serif" font-size="185">A</text>
+        <text x="96"  y="205" font-family="'Cormorant Garamond',serif" font-style="italic" font-size="140">&amp;</text>
+        <text x="150" y="244" font-family="'Italiana',serif" font-size="205">J</text>
+      </g>
     </symbol>
   </svg>
 

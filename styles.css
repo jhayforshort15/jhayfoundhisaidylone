@@ -70,9 +70,9 @@ img{max-width:100%;display:block}
 }
 .nav-logo{display:inline-flex;align-items:center;text-decoration:none;transition:.3s}
 .nav-logo:hover{transform:scale(1.05)}
-.mono{display:block}
-.mono--nav{width:58px;height:48px}
-.mono--footer{width:118px;height:98px}
+.mono{display:block;width:auto}
+.mono--nav{height:52px}
+.mono--footer{height:110px}
 .nav-links{display:flex;gap:2rem}
 .nav-links a{
   font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;

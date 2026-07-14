@@ -244,7 +244,7 @@ img{max-width:100%;display:block}
 .tl-ev{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;color:var(--ink)}
 
 /* ---------- trio ---------- */
-.trio{max-width:1200px;margin:0 auto;padding:1rem 2rem 4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.trio{max-width:900px;margin:0 auto;padding:1rem 2rem 4rem;display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
 .center-card{text-align:center}
 .dress-cols{display:flex;justify-content:space-around;gap:1rem;text-align:center}
 .dress-label{text-transform:uppercase;letter-spacing:.16em;font-size:.68rem;color:var(--gold-deep);display:block;margin-bottom:.6rem}

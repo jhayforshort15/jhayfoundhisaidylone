@@ -227,6 +227,7 @@ img{max-width:100%;display:block}
 .dc-place{font-size:.82rem;margin:.5rem 0 1rem;color:var(--ink)}
 .dc-map{font-size:.7rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold)}
 
+.timeline-img{display:block;width:100%;max-width:460px;height:auto;margin:1rem auto 0}
 .tl-list{list-style:none}
 .tl-list li{display:flex;align-items:center;gap:1rem;padding:.75rem 0}
 .tl-ic{width:44px;height:44px;flex:0 0 auto;display:grid;place-items:center;border-radius:50%;background:#fdf6e7;border:1px solid var(--line);color:var(--gold-deep);transition:.35s}

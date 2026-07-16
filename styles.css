@@ -248,11 +248,14 @@ img{max-width:100%;display:block}
 .tl-ev{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;color:var(--ink)}
 
 /* ---------- trio ---------- */
-.trio{max-width:900px;margin:0 auto;padding:1rem 2rem 4rem;display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.trio{max-width:1200px;margin:0 auto;padding:1rem 2rem 4rem;display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
 .center-card{text-align:center}
-.dress-cols{display:flex;justify-content:space-around;gap:1rem;text-align:center}
+/* let grid/flex children shrink instead of forcing the card wider than its column */
+.trio-card,.details-wrap>.panel{min-width:0}
+.dress-cols{display:flex;justify-content:space-around;gap:1rem;text-align:center;min-width:0}
+.dress-cols>div{min-width:0}
 .dress-label{text-transform:uppercase;letter-spacing:.16em;font-size:.68rem;color:var(--gold-deep);display:block;margin-bottom:.6rem}
-.dress-fig{width:auto;height:150px;max-width:100%;object-fit:contain;display:block;margin:0 auto}
+.dress-fig{width:auto;height:auto;max-height:150px;max-width:100%;object-fit:contain;display:block;margin:0 auto}
 .attire-guide{text-align:center;margin-top:1.4rem}
 .attire-title{font-family:'Cormorant Garamond',serif;text-transform:uppercase;letter-spacing:.12em;color:var(--brown);font-size:1.1rem;margin-bottom:.5rem}
 .attire-text{font-size:.86rem;color:var(--ink);max-width:340px;margin:0 auto;line-height:1.7}
@@ -274,7 +277,7 @@ img{max-width:100%;display:block}
 .g6{background-image:linear-gradient(135deg,#e4d3ab,#bd9b67)}
 
 /* ---------- rsvp ---------- */
-.rsvp{max-width:1000px;margin:0 auto;padding:4rem 2rem 5rem;text-align:center;border-top:1px solid var(--line)}
+.rsvp{max-width:1200px;margin:0 auto;padding:4rem 2rem 5rem;text-align:center;border-top:1px solid var(--line)}
 .rsvp .script-title{margin-bottom:2.2rem}
 .rsvp-form{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem 2rem;text-align:left}
 .field{display:flex;flex-direction:column}
@@ -358,6 +361,9 @@ img{max-width:100%;display:block}
   .st-year{font-size:1.1rem}
   .cd-grid{gap:.4rem}
   .cd-sep{height:34px}
+  /* keep every section on the same left/right edges so cards + inputs align */
+  .details-wrap{padding:1rem 1.2rem 3rem}
+  .trio{padding:1rem 1.2rem 4rem}
   .rsvp{padding:3rem 1.2rem 4rem}
 }
 @media(max-width:440px){

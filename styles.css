@@ -219,13 +219,17 @@ img{max-width:100%;display:block}
 
 .details-wrap{max-width:1200px;margin:0 auto;padding:1rem 2rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem}
 .detail-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
-.detail-card{border:1px solid var(--line);border-radius:5px;padding:1.6rem 1rem;text-align:center;background:#fdfaf3;transition:.35s}
+.detail-card{border:1px solid var(--line);border-radius:5px;padding:1.6rem 1rem;text-align:center;background:#fdfaf3;transition:.35s;
+  display:flex;flex-direction:column;height:100%}
 .detail-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.dc-icon{font-size:1.8rem;margin-bottom:.6rem}
+.dc-icon{font-size:1.8rem;margin-bottom:.6rem;min-height:66px;display:flex;align-items:center;justify-content:center}
+.dc-icon--img{width:auto;height:66px;object-fit:contain;margin:0 auto .6rem;display:block}
 .detail-card h3{font-family:'Cormorant Garamond',serif;text-transform:uppercase;letter-spacing:.1em;color:var(--brown);font-size:1rem;margin-bottom:.5rem}
 .dc-time{color:var(--gold-deep);font-weight:500;letter-spacing:.1em}
 .dc-place{font-size:.82rem;margin:.5rem 0 1rem;color:var(--ink)}
-.dc-map{font-size:.7rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold)}
+/* push the map link to the bottom so both cards line up */
+.dc-map{font-size:.7rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold-deep);text-decoration:none;
+  border-bottom:1px solid var(--gold);margin-top:auto;align-self:center}
 
 .timeline-img{display:block;width:100%;max-width:460px;height:auto;margin:1rem auto 0}
 .tl-list{list-style:none}

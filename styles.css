@@ -262,10 +262,16 @@ img{max-width:100%;display:block}
 .swatches{display:flex;justify-content:center;gap:.5rem;margin:1.4rem 0 .4rem}
 .swatches span{width:26px;height:26px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
 .gift-icon{font-size:2rem;margin-bottom:.4rem}
-/* payment QR codes — single row; keep white tiles so they stay scannable */
-.qr-row{display:flex;flex-wrap:nowrap;justify-content:center;align-items:center;gap:.6rem;margin:1rem 0 1.2rem}
-.qr{flex:1 1 0;min-width:0;max-width:120px;aspect-ratio:1;object-fit:contain;
-  background:#fff;border:1px solid var(--line);border-radius:6px;padding:.35rem}
+/* payment QR codes — white tiles + generous size so they stay scannable */
+.qr-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.4rem 0 .6rem;min-width:0}
+.qr-item{margin:0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.qr-link{display:block;width:100%;line-height:0}
+.qr{width:100%;height:auto;aspect-ratio:1;object-fit:contain;
+  background:#fff;border:1px solid var(--line);border-radius:6px;padding:.4rem;
+  image-rendering:-webkit-optimize-contrast;transition:.3s}
+.qr-link:hover .qr{border-color:var(--gold);transform:scale(1.03)}
+.qr-label{font-size:.66rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-deep);line-height:1.4;margin-top:auto}
+.qr-hint{font-size:.7rem;color:var(--ink);opacity:.7;font-style:italic;margin-top:.2rem}
 .gift-text{font-size:.86rem;margin:.6rem 0;color:var(--ink)}
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
 .g-img{aspect-ratio:1;border-radius:4px;background:#e2d4b8 center/cover}
@@ -365,6 +371,9 @@ img{max-width:100%;display:block}
   .details-wrap{padding:1rem 1.2rem 3rem}
   .trio{padding:1rem 1.2rem 4rem}
   .rsvp{padding:3rem 1.2rem 4rem}
+  /* stack QR codes on phones — 3-across renders each too small to scan */
+  .qr-row{grid-template-columns:1fr;max-width:260px;margin-inline:auto;gap:1.4rem}
+  .qr-label{font-size:.7rem}
 }
 @media(max-width:440px){
   .hero-names .name{font-size:4.4rem;letter-spacing:.02em}
